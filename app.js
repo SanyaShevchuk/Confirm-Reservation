@@ -3,12 +3,13 @@
  * if he ordered on past date we would inform him that it is impossible
  */
 function isCorrectDate(){
-  var options = { year: 'numeric', month: 'long', day: 'numeric' };
-  let date_now = new Date().toLocaleDateString();
-  let date_set = new Date(document.getElementById('date').value).toLocaleDateString();
+  var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minutes: 'numeric' };
+  let date_now = new Date();
+  let date_set = new Date(document.getElementById('date').value);
   // Compare date, does user order correct date
-  if(date_set > date_now)
-   return true;
+  if(date_set.getTime() < date_now.getTime())
+    throw "You can not choose past date! " + "Today is " + 
+      new Date().toLocaleDateString('en-US', options);
    else if (date_set == date_now){
 
     //format date and compare hours and then minutes
@@ -34,8 +35,8 @@ function isCorrectDate(){
     let time_now = new Date().toLocaleString().split(',')[1].split(':').join('');
     let time_set = document.getElementById('time').value.split(':').join('') + "00";
     if(Number(time_now) > Number(time_set))
-      throw "You can not choose past date! " + "Today is " + 
-       new Date().toLocaleDateString('en-US', options);
+      throw "You can not choose this date! " + "Right now " + 
+       new Date().toLocaleDateString().split(":")[1];
    }
 }
 
@@ -89,7 +90,7 @@ minus.onclick = function(){
   //when we change amount of tables btn confrim is active then
   visibleConfirmbtn();
   let count = document.getElementById('countTables').textContent;
-  if(Number(count)>0)
+  if(Number(count)>1)
     document.getElementById('countTables').innerHTML = Number(count)-1;
 }
 
