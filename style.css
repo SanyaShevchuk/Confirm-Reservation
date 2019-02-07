@@ -2,6 +2,24 @@ body{
   background-color: rgb(195, 195, 195);
 }
 
+.section{
+  margin-top: 30px;
+  width: 80%;
+}
+
+.section img{
+  width: 30px;
+  height: 30px;
+}
+
+.arrow{
+  float: left;
+}
+
+.magnifier{
+  float: right;
+}
+
 .container{
   padding: 20px 10px;
   display:flex;
@@ -31,6 +49,7 @@ body{
   color:rgb(75, 75, 82);
   font-size: 1.5em;
   font-weight: 200;
+  margin: 5px 0;
 }
 
 .amountTables{
@@ -47,7 +66,7 @@ body{
 }
 
 .amountTables p{
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 900;
   opacity: 0.7;
   margin: 0px 50px;
@@ -63,20 +82,28 @@ body{
   color:rgb(75, 75, 82);
   font-size: 1.2em;
   font-weight: 200;
+  margin: 5px 0;
 }
 
-.chooseDate span{
-  color:rgb(75, 75, 82);
-  font-size: 1.5em;
-  font-weight: 900;
+input {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
 }
 
-a{
-  margin: 30px 0;
-  width: 300px;
-  height: 80px;
-  background-color: rgb(87, 87, 87);
+.confirm{
+  /* width: 300px;
+  height: 70px; */
+  width: 250px;
+  height: 60px;
+  background-color: rgb(50, 50, 50);
   color: rgb(255, 255, 255);
-  text-decoration: none;
+  /* opacity: 0.9; */
+  opacity: 0.5;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 15px 50px 10px rgb(162, 162, 162);
 }

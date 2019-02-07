@@ -8,7 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <img class="mainphoto" src='pics/restaurnt.jpg' alt="">
+      <div class="section">
+        <img class = "arrow" src="pics/arrow.png" alt="">
+        <img class = "magnifier" src="pics/magnifier.jpg" alt="">
+      </div>
+      <img class="mainphoto" src='pics/restaurnt1.jpg' alt="">
       <h2>THE WATER CLUB</h2>
       <h3>Table for</h3>
       <div class="amountTables">
@@ -18,9 +22,10 @@
       </div>
       <div class="chooseDate">
         <p>Choose Date & Time</p>
-        <span>07 February 2019 - 19:30</span>
+        <input id="date" type="date">
+        <input id="time" type="time" value="00:00" step="900">
+        <button class="confirm" disabled>CONFIRM</button>
       </div>
-      <button>CONFIRM</button>
     </div>
   </body>
   <script src="app.js"></script>
